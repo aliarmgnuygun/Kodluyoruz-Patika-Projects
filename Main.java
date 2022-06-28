@@ -1,44 +1,32 @@
-package Exercises;
+package CalculateKDV;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        Scanner grade = new Scanner(System.in);
+        System.out.println("Welcome to the KDV Calculation Program");
+        System.out.print("Please enter price: ");
+        int price = input.nextInt();
 
-        System.out.println("\tWelcome to Calculating Grade Average Program\t");
-        System.out.print("Please enter Math Grade: ");
-        int mathGrade = grade.nextInt();
+        float kdv1 = 1.18f, kdv2 = 1.08f, newPrice = 0;
 
-        System.out.print("Please enter Pyhsic Grade: ");
-        int pyhsicGrade = grade.nextInt();
-
-        System.out.print("Please enter Turkish Grade: ");
-        int turkishGrade = grade.nextInt();
-
-        System.out.print("Please enter Checimal Grade: ");
-        int checimalGrade = grade.nextInt();
-
-        System.out.print("Please enter History Grade: ");
-        int historyGrade = grade.nextInt();
-
-        System.out.print("Please enter Music Grade: ");
-        int musicGrade = grade.nextInt();;
+        if (price > 1000){
+            newPrice = price*kdv2;
+            System.out.println("Price without KDV: " + price +
+                    "\nPrice with KDV: " + newPrice +
+                    "\nKDV amount: " + kdv2);
 
 
-        float average = (mathGrade + pyhsicGrade + checimalGrade + turkishGrade + historyGrade + musicGrade) / 6;
-        
-        //without if-else blocks
-        String gpa = (average >=60) ? ("\nPassed the class!\nGrade average:" + average) : "\nFailed the class!";
-        System.out.println(gpa);
+        }else if( 0 < price && price <= 1000){
+            newPrice = price*kdv1;
+            System.out.println("Price without KDV: " + price +
+                    "\nPrice with KDV: " + newPrice +
+                    "\nKDV amount: " + kdv1);
 
-        /*
-        if (average >= 60 ){
-            System.out.print("\nPassed the class!\nGrade average: " + average);
-        }else{
-            System.out.println("\nFailed the class!");
-        }*/
+        }else
+            System.out.println("Invalid value! Please enter a value greater than 0.");
 
     }
 }
