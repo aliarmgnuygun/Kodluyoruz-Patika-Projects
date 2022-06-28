@@ -28,13 +28,17 @@ public class Main {
 
 
         float average = (mathGrade + pyhsicGrade + checimalGrade + turkishGrade + historyGrade + musicGrade) / 6;
+        
+        //without if-else blocks
+        String gpa = (average >=60) ? ("\nPassed the class!\nGrade average:" + average) : "\nFailed the class!";
+        System.out.println(gpa);
 
+        /*
         if (average >= 60 ){
             System.out.print("\nPassed the class!\nGrade average: " + average);
         }else{
             System.out.println("\nFailed the class!");
-        }
+        }*/
 
     }
 }
-
