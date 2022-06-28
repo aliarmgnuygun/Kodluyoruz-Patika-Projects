@@ -2,7 +2,7 @@ package Exercises;
 
 import java.util.Scanner;
 
-public class Main {
+public class GAverage {
     public static void main(String[] args) {
 
         Scanner grade = new Scanner(System.in);
