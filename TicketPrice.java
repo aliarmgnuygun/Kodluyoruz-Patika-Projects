@@ -8,6 +8,15 @@ public class TicketPrice {
         int distance, age;
         float perKmPrice = 0.10f,totalAmount, normAmount,rate;
         String select, tripType = "1 => One Way, 2 => Round Trip";
+        
+        /*
+        Values received from the user must be valid (distance and age are positive numbers, trip type is 1 or 2). 
+        Otherwise, "You Have Entered Wrong Data!" A warning should be given.
+        If the person is younger than 12 years old, 50% discount is applied on the ticket price.
+        If the person is between the ages of 12-24, a 10% discount is applied on the ticket price.
+        If the person is over 65 years old, a 30% discount is applied on the ticket price.
+        If the person has chosen the "Journey Type" round trip, 20% discount is applied on the ticket price.
+        */
 
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to Flight Ticket Price Calculation Program ");
