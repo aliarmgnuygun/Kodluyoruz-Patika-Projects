@@ -1,4 +1,4 @@
-package Loops.OddNum;
+package Loops.EvenNum;
 
 import java.util.Scanner;
 
